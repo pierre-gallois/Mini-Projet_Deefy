@@ -90,7 +90,7 @@ class AddPodcastTrackAction extends Action
         // on enregistre en base puis on met à jour la playlist en session
         $repo = DeefyRepository::getInstance();
         $repo->saveTrack($piste);
-        $repo->addTrackToPlaylist($pl->id, $piste->id, $pl->nbPistes + 1);
+        $repo->addTrackToPlaylist($pl->id, $piste->id);
 
         $pl->ajouterPiste($piste);
         $_SESSION['playlist'] = serialize($pl);
