@@ -116,8 +116,8 @@ class AddPodcastTrackAction extends Action
 
         // on choisit nous-mêmes le nom (aléatoire) et l'extension .mp3 :
         // impossible de se retrouver avec un fichier .php sur le serveur
-        $nom = 'audio/' . bin2hex(random_bytes(16)) . '.mp3';
-        if (!move_uploaded_file($f['tmp_name'], __DIR__ . '/../../../' . $nom)) {
+        $nom = bin2hex(random_bytes(16)) . '.mp3';
+        if (!move_uploaded_file($f['tmp_name'], DIR . '/../../../audio/' . $nom)) {
             return null;
         }
         return $nom;
