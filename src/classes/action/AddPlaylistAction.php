@@ -2,7 +2,7 @@
 
 namespace iutnc\deefy\action;
 
-use iutnc\deefy\audio\lists\Playlist;
+use iutnc\deefy\audio\lists\PlayList;
 use iutnc\deefy\render\AudioListRenderer;
 use iutnc\deefy\render\Renderer;
 use iutnc\deefy\repository\DeefyRepository;
@@ -32,11 +32,11 @@ class AddPlaylistAction extends Action
         }
 
         // on enregistre en base (requête préparée, donc pas d'injection SQL)
-        $pl = new Playlist($nom);
+        $pl = new PlayList($nom);
         DeefyRepository::getInstance()->saveEmptyPlaylist($pl);
 
         // elle devient la playlist courante
-        $_SESSION['playlist'] = serialize($pl);
+        $_SESSION['playList'] = serialize($pl);
 
         // le nom est filtré à l'affichage par le renderer (contre le XSS)
         $r = new AudioListRenderer($pl);
