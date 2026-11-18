@@ -60,7 +60,7 @@ class Dispatcher
                         <li><a href="?action=default">Accueil</a></li>
                         <li><a href="?action=my-playlists">Mes playlists</a></li>
                         <li><a href="?action=add-playlist">Créer une playlist</a></li>
-                        <li><a href="?action=playlist">Playlist courante</a></li>
+                        <li><a href="?action=playlist">PlayList courante</a></li>
                     </ul>
                 </nav>
             </header>

@@ -24,7 +24,7 @@ titre_album VARCHAR(100) DEFAULT NULL,
 annee_album INT DEFAULT NULL,
 numero_album INT DEFAULT NULL,
 auteur_podcast VARCHAR(100) DEFAULT NULL,
-date_podcast DATE DEFAULT NULL,
+date_posdcast DATE DEFAULT NULL,
 PRIMARY KEY (id)
 )
 
@@ -53,5 +53,3 @@ PRIMARY KEY (id_user, id_pl),
 FOREIGN KEY (id_user) REFERENCES user (id),
 FOREIGN KEY (id_pl) REFERENCES playlist (id)
 )
-
-                                                                      (3, 4, 1);

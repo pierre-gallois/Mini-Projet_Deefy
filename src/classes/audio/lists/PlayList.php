@@ -5,7 +5,7 @@ namespace iutnc\deefy\audio\lists;
 use iutnc\deefy\audio\tracks\AudioTrack;
 
 // une playlist : on peut ajouter / retirer des pistes quand on veut
-class Playlist extends AudioList
+class PlayList extends AudioList
 {
     public function ajouterPiste(AudioTrack $piste): void
     {
