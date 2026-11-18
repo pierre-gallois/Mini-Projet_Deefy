@@ -5,3 +5,6 @@
 # PHP / Composer
 /vendor/
 composer.phar
+
+#id de la base de donné
+/src/conf/deefy.db.ini
