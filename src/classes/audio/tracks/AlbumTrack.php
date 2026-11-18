@@ -11,13 +11,11 @@ class AlbumTrack extends AudioTrack
     protected string $artiste = '';
     protected int $annee = 0;
 
-    public function __construct(string $titre, string $nomFichier, string $auteur = '', string $date = '', int $duree = 0, string $genre = '')
+    public function __construct(string $titre, string $nomFichier, string $album, int $numero)
     {
         parent::__construct($titre, $nomFichier);
-        $this->auteur = $auteur;
-        $this->date = $date;
-        $this->setDuree($duree);
-        $this->genre = $genre;
+        $this->album = $album;
+        $this->numero = $numero;
     }
 
     public function setArtiste(string $artiste): void

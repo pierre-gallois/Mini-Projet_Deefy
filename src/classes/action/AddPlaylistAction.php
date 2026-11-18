@@ -36,7 +36,7 @@ class AddPlaylistAction extends Action
         DeefyRepository::getInstance()->saveEmptyPlaylist($pl);
 
         // elle devient la playlist courante
-        $_SESSION['playList'] = serialize($pl);
+        $_SESSION['playlist'] = serialize($pl);
 
         // le nom est filtré à l'affichage par le renderer (contre le XSS)
         $r = new AudioListRenderer($pl);

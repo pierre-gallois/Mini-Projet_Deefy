@@ -2,7 +2,7 @@
 
 namespace iutnc\deefy\repository;
 
-use iutnc\deefy\audio\lists\Playlist;
+use iutnc\deefy\audio\lists\PlayList;
 use iutnc\deefy\audio\tracks\AlbumTrack;
 use iutnc\deefy\audio\tracks\AudioTrack;
 use iutnc\deefy\audio\tracks\PodcastTrack;
@@ -49,7 +49,7 @@ class DeefyRepository
         $stmt = $this->pdo->query("SELECT id, nom FROM playlist ORDER BY nom");
         $playlists = [];
         foreach ($stmt->fetchAll() as $row) {
-            $pl = new Playlist($row['nom']);
+            $pl = new PlayList($row['nom']);
             $pl->setId((int) $row['id']);
             $playlists[] = $pl;
         }
@@ -57,7 +57,7 @@ class DeefyRepository
     }
 
     // fonctionnalité 2 : une playlist avec toutes ses pistes
-    public function findPlaylistById(int $id): ?Playlist
+    public function findPlaylistById(int $id): ?PlayList
     {
         $stmt = $this->pdo->prepare("SELECT id, nom FROM playlist WHERE id = ?");
         $stmt->execute([$id]);
@@ -79,7 +79,7 @@ class DeefyRepository
             $pistes[] = $this->creerPiste($t);
         }
 
-        $pl = new Playlist($row['nom'], $pistes);
+        $pl = new PlayList($row['nom'], $pistes);
         $pl->setId((int) $row['id']);
         return $pl;
     }
@@ -88,13 +88,13 @@ class DeefyRepository
     private function creerPiste(array $t): AudioTrack
     {
         if ($t['type'] === 'A') {
-            $piste = new AlbumTrack($t['titre'], $t['filename'], $t['titre_album'] ?? '', (int) $t['numero_album']);
+            $piste = new AlbumTrack($t['titre'], $t['filename'] ?? '', $t['titre_album'] ?? '', (int) $t['numero_album']);
             $piste->setArtiste($t['artiste_album'] ?? '');
             $piste->setAnnee((int) $t['annee_album']);
         } else {
-            $piste = new PodcastTrack($t['titre'], $t['filename']);
+            $piste = new PodcastTrack($t['titre'], $t['filename'] ?? '');
             $piste->setAuteur($t['auteur_podcast'] ?? '');
-            $piste->setDate($t['date_podcast'] ?? '');
+            $piste->setDate($t['date_posdcast'] ?? '');
         }
         $piste->setGenre($t['genre'] ?? '');
         $piste->setDuree((int) $t['duree']);
@@ -103,7 +103,7 @@ class DeefyRepository
     }
 
     // fonctionnalité 4 : enregistre une playlist vide et lui donne son id
-    public function saveEmptyPlaylist(Playlist $pl): Playlist
+    public function saveEmptyPlaylist(PlayList $pl): PlayList
     {
         $stmt = $this->pdo->prepare("INSERT INTO playlist (nom) VALUES (?)");
         $stmt->execute([$pl->nom]);
