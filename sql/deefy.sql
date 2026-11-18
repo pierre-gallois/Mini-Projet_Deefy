@@ -1,3 +1,5 @@
+
+
 DROP TABLE IF EXISTS user2playlist;
 DROP TABLE IF EXISTS playlist2track;
 DROP TABLE IF EXISTS user;
