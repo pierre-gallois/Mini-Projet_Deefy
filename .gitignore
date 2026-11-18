@@ -8,4 +8,3 @@ composer.phar
 
 #id de la base de donné
 /src/config/deefy.db.ini
-/.htaccess
