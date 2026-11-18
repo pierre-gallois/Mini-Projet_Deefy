@@ -56,20 +56,18 @@ FOREIGN KEY (id_pl) REFERENCES playlist (id)
 
 -- données des test
 INSERT INTO playlist (id, nom) VALUES
-(1, 'Best of rock'),
-(2, 'Jazz du dimanche'),
-(3, 'Podcasts info');
+(1, 'Lucille');
 
 INSERT INTO track (id, titre, genre, duree, filename, type, artiste_album, titre_album, annee_album, numero_album, auteur_podcast, date_posdcast) VALUES
-(1, 'Gimme Shelter', 'Rock', 271, 'audio/01-gimme-shelter.mp3', 'A', 'The Rolling Stones', 'Let it Bleed', 1969, 1, NULL, NULL),
-(2, 'Whole Lotta Love', 'Rock', 334, 'audio/01-whole-lotta-love.mp3', 'A', 'Led Zeppelin', 'Led Zeppelin II', 1969, 1, NULL, NULL),
-(3, 'My Funny Valentine', 'Jazz', 187, 'audio/01-my-funny-valentine.mp3', 'A', 'Chet Baker', 'Chet Baker Sings', 1954, 1, NULL, NULL),
-(4, 'Le code en PHP', 'Tech', 1800, 'audio/podcast-php.mp3', 'P', NULL, NULL, NULL, NULL, 'Radio IUT', '2026-10-01');
+(1, 'Im with you', 'Jazz', 271, 'audio/01-Im_with_you_BB-King-Lucille.mp3', 'A', 'BB King', 'Lucille', 1968, 1, NULL, NULL),
+(2, 'I Need your Love', 'Jazz', 334, 'audio/02-I_Need_Your_Love-BB_King-Lucille.mp3', 'A', 'BB King', 'Lucille', 1968, 1, NULL, NULL),
+(3, 'Country Gril', 'Jazz', 187, 'audio/03-Country_Girl-BB_King-Lucille.mp3', 'A', 'BB King', 'Lucille', 1968, 1, NULL, NULL);
+
 
 INSERT INTO playlist2track (id_pl, id_track, no_piste_dans_liste) VALUES
 (1, 1, 1),
 (1, 2, 2),
-(2, 3, 1),
-(3, 4, 1);
+(1, 3, 3);
+
 
 
