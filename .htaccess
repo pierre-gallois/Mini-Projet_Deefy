@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteBase /www/e37417u/deefy
+
+#
+# Pour interdire l'accès aux répertoires contenant du code
+# interdit l'accès à deefy/sql
+RewriteRule ^sql(/.*|)$ - [NC,F]
+# interdit l'accès à deefy/src (il ne doit pas contenir index.php)
+RewriteRule ^src(/.*|)$ - [NC,F]
+# interdit l'accès à tous les fichiers .ini
+RewriteRule \.ini$ - [NC,F]
+# interdit l'accès à deefy/vendor
+RewriteRule ^vendor(/.*|)$ - [NC,F]
