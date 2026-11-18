@@ -1,0 +1,9 @@
+{
+  "name": "iutnc/deefy",
+  "description": "Mini-projet_Deefy",
+  "autoload": {
+    "psr-4": {
+      "iutnc\\deefy\\": "src/classes/"
+    }
+  }
+}

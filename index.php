@@ -16,7 +16,7 @@ use iutnc\deefy\repository\DeefyRepository;
 
 session_start();
 
-DeefyRepository::setConfig(__DIR__ . '/src/conf/deefy.db.ini');
+DeefyRepository::setConfig(__DIR__ . '/../config/deefy.db.ini');
 
 $dispatcher = new Dispatcher();
 $dispatcher->addRoute('default', DefaultAction::class)

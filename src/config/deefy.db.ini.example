@@ -1,0 +1,4 @@
+host = localhost
+database = nom_de_la_base
+username = login
+password = mot_de_passe
