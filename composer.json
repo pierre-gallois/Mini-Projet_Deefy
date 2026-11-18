@@ -1,9 +1,9 @@
 {
-    "name": "iutnc/deefy",
-    "description": "Mini-projet Deefy - BUT Informatique S3",
-    "autoload": {
-        "psr-4": {
-            "iutnc\\deefy\\": "src/classes/"
-        }
+  "name": "iutnc/deefy",
+  "description": "Mini-projet_Deefy",
+  "autoload": {
+    "psr-4": {
+      "iutnc\\deefy\\": "src/classes/"
     }
+  }
 }
