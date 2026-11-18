@@ -59,9 +59,9 @@ INSERT INTO playlist (id, nom) VALUES
 (1, 'Lucille');
 
 INSERT INTO track (id, titre, genre, duree, filename, type, artiste_album, titre_album, annee_album, numero_album, auteur_podcast, date_posdcast) VALUES
-(1, 'Im with you', 'Jazz', 271, 'audio/01-Im_with_you_BB-King-Lucille.mp3', 'A', 'BB King', 'Lucille', 1968, 1, NULL, NULL),
-(2, 'I Need your Love', 'Jazz', 334, 'audio/02-I_Need_Your_Love-BB_King-Lucille.mp3', 'A', 'BB King', 'Lucille', 1968, 1, NULL, NULL),
-(3, 'Country Gril', 'Jazz', 187, 'audio/03-Country_Girl-BB_King-Lucille.mp3', 'A', 'BB King', 'Lucille', 1968, 1, NULL, NULL);
+(1, 'Im with you', 'Jazz', 271, '/audio/01-Im_with_you_BB-King-Lucille.mp3', 'A', 'BB King', 'Lucille', 1968, 1, NULL, NULL),
+(2, 'I Need your Love', 'Jazz', 334, '/audio/02-I_Need_Your_Love-BB_King-Lucille.mp3', 'A', 'BB King', 'Lucille', 1968, 1, NULL, NULL),
+(3, 'Country Gril', 'Jazz', 187, '/audio/03-Country_Girl-BB_King-Lucille.mp3', 'A', 'BB King', 'Lucille', 1968, 1, NULL, NULL);
 
 
 INSERT INTO playlist2track (id_pl, id_track, no_piste_dans_liste) VALUES
