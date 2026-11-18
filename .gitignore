@@ -1,0 +1,7 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# PHP / Composer
+/vendor/
+composer.phar
