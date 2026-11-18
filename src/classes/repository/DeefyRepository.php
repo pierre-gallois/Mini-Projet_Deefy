@@ -18,7 +18,7 @@ class DeefyRepository
 
     private function __construct(array $conf)
     {
-        $dsn = "{$conf['driver']}:host={$conf['host']};dbname={$conf['database']};charset=utf8";
+        $dsn = "mysql:host={$conf['host']};dbname={$conf['database']};charset=utf8";
         $this->pdo = new PDO($dsn, $conf['username'], $conf['password'], [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
