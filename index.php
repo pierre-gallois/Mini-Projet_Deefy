@@ -16,7 +16,7 @@ use iutnc\deefy\repository\DeefyRepository;
 
 session_start();
 
-DeefyRepository::setConfig(DIR . '/src/config/deefy.db.ini');
+DeefyRepository::setConfig(__DIR__ . '/src/config/deefy.db.ini');
 $dispatcher = new Dispatcher();
 $dispatcher->addRoute('default', DefaultAction::class)
     ->addRoute('my-playlists', MyPlaylistsAction::class)
