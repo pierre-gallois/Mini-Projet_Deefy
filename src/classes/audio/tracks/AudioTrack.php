@@ -5,10 +5,10 @@ namespace iutnc\deefy\audio\tracks;
 use iutnc\deefy\exception\InvalidPropertyNameException;
 use iutnc\deefy\exception\InvalidPropertyValueException;
 
-// classe mère des pistes audio (TD4 ex4 + TD5)
+// classe mère des pistes audio
 class AudioTrack
 {
-    // propriétés initialisées par le constructeur : pas de setter
+    // propriétés initialisées par le constructeur
     protected string $titre;
     protected string $nomFichier;
 

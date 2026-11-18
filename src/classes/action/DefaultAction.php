@@ -2,7 +2,7 @@
 
 namespace iutnc\deefy\action;
 
-// page d'accueil (TD12 partie 1)
+// page d'accueil
 class DefaultAction extends Action
 {
     protected function executeGet(): string

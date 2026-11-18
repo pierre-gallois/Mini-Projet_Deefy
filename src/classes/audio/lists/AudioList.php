@@ -4,7 +4,7 @@ namespace iutnc\deefy\audio\lists;
 
 use iutnc\deefy\exception\InvalidPropertyNameException;
 
-// liste de pistes audio (TD5 ex3)
+// liste de pistes audio
 class AudioList
 {
     protected string $nom;

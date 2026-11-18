@@ -2,7 +2,7 @@
 
 namespace iutnc\deefy\action;
 
-// classe mère de toutes les actions (fichier fourni au TD11, complété avec l'exercice 3)
+// classe mère de toutes les actions
 abstract class Action
 {
     protected ?string $http_method = null;
@@ -16,7 +16,7 @@ abstract class Action
         $this->script_name = $_SERVER['SCRIPT_NAME'];
     }
 
-    // TD11 ex3 : une méthode par type de requête HTTP
+    // une méthode par type de requête HTTP
     public function execute(): string
     {
         if ($this->http_method === 'POST') {
@@ -33,7 +33,7 @@ abstract class Action
         return $this->executeGet();
     }
 
-    // TD11 ex3 : on peut appeler l'objet comme une fonction : $html = $action();
+    // appele l'objet comme une fonction : $html = $action();
     public function __invoke(): string
     {
         return $this->execute();

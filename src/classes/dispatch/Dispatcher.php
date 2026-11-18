@@ -4,7 +4,7 @@ namespace iutnc\deefy\dispatch;
 
 use iutnc\deefy\action\DefaultAction;
 
-// choisit l'action à exécuter selon le paramètre ?action=... puis affiche la page (TD11 ex2)
+// choisit l'action à exécuter selon le paramètre ?action=... puis affiche la page
 class Dispatcher
 {
     private string $action;

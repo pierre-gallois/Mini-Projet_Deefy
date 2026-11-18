@@ -7,7 +7,7 @@ use iutnc\deefy\render\AudioListRenderer;
 use iutnc\deefy\render\Renderer;
 use iutnc\deefy\repository\DeefyRepository;
 
-// fonctionnalité 4 : créer une playlist vide (TD12 partie 2)
+// fonctionnalité 4 : créer une playlist vide
 class AddPlaylistAction extends Action
 {
     // GET : on affiche le formulaire

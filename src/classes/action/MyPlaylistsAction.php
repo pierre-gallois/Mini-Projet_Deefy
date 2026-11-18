@@ -4,7 +4,7 @@ namespace iutnc\deefy\action;
 
 use iutnc\deefy\repository\DeefyRepository;
 
-// fonctionnalité 1 : mes playlists (liste des playlists de la base)
+// fonctionnalité 1 : mes playlists
 class MyPlaylistsAction extends Action
 {
     protected function executeGet(): string

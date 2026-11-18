@@ -2,7 +2,6 @@
 
 namespace iutnc\deefy\audio\lists;
 
-// un album : la liste des pistes est obligatoire et n'est plus modifiable
 class Album extends AudioList
 {
     protected string $artiste = '';

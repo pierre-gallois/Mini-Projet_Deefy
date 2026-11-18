@@ -6,8 +6,8 @@ use iutnc\deefy\render\AudioListRenderer;
 use iutnc\deefy\render\Renderer;
 use iutnc\deefy\repository\DeefyRepository;
 
-// ?action=playlist          -> fonctionnalité 5 : affiche la playlist courante (en session)
-// ?action=playlist&id=3     -> fonctionnalité 2 : charge la playlist 3 de la base, elle devient la playlist courante
+// fonctionnalité 5 : affiche la playlist courante (en session)
+// fonctionnalité 2 : charge la playlist 3 de la base, elle devient la playlist courante
 class DisplayPlaylistAction extends Action
 {
     protected function executeGet(): string

@@ -8,7 +8,7 @@ use iutnc\deefy\render\AudioListRenderer;
 use iutnc\deefy\render\Renderer;
 use iutnc\deefy\repository\DeefyRepository;
 
-// fonctionnalité 3 : ajouter un podcast à la playlist courante (TD12 parties 3 et 4)
+// fonctionnalité 3 : ajouter un podcast à la playlist courante
 class AddPodcastTrackAction extends Action
 {
     protected function executeGet(): string
@@ -109,7 +109,7 @@ class AddPodcastTrackAction extends Action
         }
         $f = $_FILES['userfile'];
 
-        // vérifications demandées dans le TD : extension .mp3 et type audio/mpeg
+        // vérifications demandées dans le projet : extension .mp3 et type audio/mpeg
         if (strtolower(substr($f['name'], -4)) !== '.mp3' || $f['type'] !== 'audio/mpeg') {
             return null;
         }
